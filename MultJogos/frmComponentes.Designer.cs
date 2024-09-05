@@ -294,6 +294,7 @@ namespace MultJogos
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "B";
+            this.Load += new System.EventHandler(this.frmComponentes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

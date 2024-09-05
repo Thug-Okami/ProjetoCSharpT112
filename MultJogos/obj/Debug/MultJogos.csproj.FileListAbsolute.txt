@@ -10,3 +10,7 @@ C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos
 C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmLogin.resources
 C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmSplash.resources
 C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmComponentes.resources
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmFuncionarios.resources
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmMenuPrincipal.resources
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmPesquisar.resources
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmSobreNos.resources
