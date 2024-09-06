@@ -29,7 +29,17 @@ namespace MultJogos
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja sair do sistema ?",
+                "Sistema",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2);
+
+            if(result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

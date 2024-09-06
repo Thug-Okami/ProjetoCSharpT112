@@ -59,6 +59,8 @@ namespace MultJogos
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.lblNum = new System.Windows.Forms.Label();
             this.pnlCRUD.SuspendLayout();
             this.gpbFuncionarios.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +91,7 @@ namespace MultJogos
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.button7_Click);
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnNovo
             // 
@@ -102,7 +104,7 @@ namespace MultJogos
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.button1_Click);
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnLimpar
             // 
@@ -115,7 +117,7 @@ namespace MultJogos
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.button6_Click);
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -128,7 +130,7 @@ namespace MultJogos
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.button5_Click);
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnCadastrar
             // 
@@ -141,7 +143,7 @@ namespace MultJogos
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.button2_Click);
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnExcluir
             // 
@@ -154,7 +156,7 @@ namespace MultJogos
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.button4_Click);
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -167,10 +169,12 @@ namespace MultJogos
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.button3_Click);
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // gpbFuncionarios
             // 
+            this.gpbFuncionarios.Controls.Add(this.lblNum);
+            this.gpbFuncionarios.Controls.Add(this.txtNum);
             this.gpbFuncionarios.Controls.Add(this.txtCidade);
             this.gpbFuncionarios.Controls.Add(this.lblCidade);
             this.gpbFuncionarios.Controls.Add(this.cbbEstado);
@@ -280,15 +284,16 @@ namespace MultJogos
             // 
             this.mskCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCEP.Location = new System.Drawing.Point(342, 246);
-            this.mskCEP.Mask = "00000000";
+            this.mskCEP.Mask = "00000-000";
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(146, 26);
             this.mskCEP.TabIndex = 6;
+            this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
             // 
             // txtBairro
             // 
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(342, 317);
+            this.txtBairro.Location = new System.Drawing.Point(420, 317);
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(302, 26);
@@ -307,7 +312,7 @@ namespace MultJogos
             // 
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(342, 294);
+            this.lblBairro.Location = new System.Drawing.Point(416, 294);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(51, 20);
             this.lblBairro.TabIndex = 13;
@@ -419,6 +424,24 @@ namespace MultJogos
             this.txtCodigo.Size = new System.Drawing.Size(83, 26);
             this.txtCodigo.TabIndex = 1;
             // 
+            // txtNum
+            // 
+            this.txtNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNum.Location = new System.Drawing.Point(330, 317);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(65, 26);
+            this.txtNum.TabIndex = 21;
+            // 
+            // lblNum
+            // 
+            this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNum.Location = new System.Drawing.Point(326, 294);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(65, 20);
+            this.lblNum.TabIndex = 22;
+            this.lblNum.Text = "Número";
+            // 
             // frmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,5 +494,7 @@ namespace MultJogos
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.MaskedTextBox mskCPF;
+        private System.Windows.Forms.Label lblNum;
+        private System.Windows.Forms.TextBox txtNum;
     }
 }

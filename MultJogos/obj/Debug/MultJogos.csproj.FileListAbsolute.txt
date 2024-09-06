@@ -14,3 +14,8 @@ C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos
 C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmMenuPrincipal.resources
 C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmPesquisar.resources
 C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.frmSobreNos.resources
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\bin\Debug\MosaicoSolutions.ViaCep.dll
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\michaell.sacordeiro\Documents\Visual Studio 2019\EmpresaTI112\MultJogos\obj\Debug\MultJogos.csproj.CopyComplete
